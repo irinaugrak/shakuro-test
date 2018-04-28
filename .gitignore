@@ -1,0 +1,9 @@
+node_modules
+*.log
+build
+.grunt
+.DS_Store
+.idea
+\.vscode/settings\.json
+
+package-lock\.json
