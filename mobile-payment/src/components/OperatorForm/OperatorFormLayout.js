@@ -10,16 +10,26 @@ export default class OperatorFormLayout extends PureComponent {
     return (
       <div className="mobile-payment__operator">
         <div className="mobile-payment__operator-wrapper">
-          <p className="mobile-payment__operator-legend">Выберите оператора для того, чтобы перейти к форме оплаты</p>
-          <Select
-            value={selectedOperator}
-            options={operatorsList}
-            onChange={onSelectChange}
-            noResultsText="Нет результатов"
-            placeholder="Выберите оператора"
-            pageSize="3"
-          />
-          <Link to="/" onClick={e => e.preventDefault()} className={selectedOperator ? "mobile-payment__operator-to-pay" : "mobile-payment__operator-to-pay mobile-payment__operator-to-pay--disabled"}>Перейти к оплате</Link>
+          {isOperatorsListLoading ?
+            <div className="spinner" />
+            :
+            <div className="mobile-payment__operator-form">
+              <p className="mobile-payment__operator-legend">Выберите оператора для того, чтобы перейти к форме оплаты</p>
+              <Select
+                value={selectedOperator}
+                options={operatorsList}
+                onChange={onSelectChange}
+                noResultsText="Нет результатов"
+                placeholder="Выберите оператора"
+              />
+              <Link
+                to="/"
+                onClick={e => e.preventDefault()}
+                className={selectedOperator ? "mobile-payment__operator-to-pay" : "mobile-payment__operator-to-pay mobile-payment__operator-to-pay--disabled"}>
+                Перейти к оплате
+              </Link>
+            </div>
+          }
         </div>
       </div>
     )

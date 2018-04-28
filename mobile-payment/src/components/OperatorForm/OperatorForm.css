@@ -2,25 +2,27 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  min-height: 100%;
+  min-height: calc(100% - 40px);
   margin: 20px 0;
   overflow-y: auto; }
   .mobile-payment__operator-wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 400px;
     padding: 40px;
+    align-items: center;
+    min-height: 262px;
     border: 1px solid #aaa;
     border-radius: 5px; }
     @media (max-width: 768px) {
       .mobile-payment__operator-wrapper {
         width: 300px;
         padding: 20px; } }
+  .mobile-payment__operator-form {
+    text-align: center; }
   .mobile-payment__operator-to-pay {
     display: block;
     padding: 10px 30px;
-    margin-top: 30px;
+    margin: 30px auto 0 auto;
     width: 240px;
     background: #3ec036;
     border: 1px solid #3ec036;
@@ -49,10 +51,14 @@
     font-size: 18px; }
   .mobile-payment__operator .Select {
     width: 300px;
-    margin-top: 30px; }
+    margin: 30px auto 0 auto; }
   .mobile-payment__operator .Select-control {
     height: 40px; }
   .mobile-payment__operator .Select-placeholder {
     line-height: 38px; }
+  .mobile-payment__operator .Select-value {
+    line-height: 38px; }
   .mobile-payment__operator .Select-menu {
     max-height: 100px; }
+  .mobile-payment__operator .Select-arrow {
+    top: 1px; }

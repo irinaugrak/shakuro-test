@@ -16,3 +16,19 @@ body {
 
 .mobile-payment {
   width: 100%; }
+
+.spinner {
+  box-sizing: border-box;
+  height: 60px;
+  width: 60px;
+  margin: 0 auto;
+  border: 0 solid #27ae60;
+  border-radius: 50%;
+  box-shadow: 0 -20px 0 24px #27ae60 inset;
+  animation: rotate 1s infinite linear; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
