@@ -1,0 +1,23 @@
+.mobile-payment__pay {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: calc(100% - 40px);
+  margin: 20px 0;
+
+  overflow-y: auto;
+
+  &-wrapper {
+    display: flex;
+    width: 300px;
+    padding: 40px;
+
+    border: 1px solid #aaa;
+    border-radius: 5px;
+
+    @media (max-width: 768px) {
+      width: 300px;
+      padding: 20px;
+    }
+  }
+}

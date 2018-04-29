@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 
 import * as operatorFormActions from '../../actions/OperatorForm';
 import OperatorFormLayout from './OperatorFormLayout';
@@ -11,21 +11,21 @@ import './OperatorForm.css';
 class OperatorForm extends Component {
 
   componentDidMount() {
-    this.props.operatorFormActions.getOperatorsList();
+    !this.props.operatorsList ? this.props.operatorFormActions.getOperatorsList() : null;
   };
 
-  selectChangeHandler = data => {
+  _selectChangeHandler = data => {
     this.props.operatorFormActions.selectOperator(data);
   };
 
   render() {
-    return(
+    return (
       <OperatorFormLayout
         operatorsList={this.props.operatorsList}
         isOperatorsListLoading={this.props.isOperatorsListLoading}
         isOperatorsListError={this.props.isOperatorsListError}
         selectedOperator={this.props.selectedOperator}
-        onSelectChange={this.selectChangeHandler}
+        onSelectChange={this._selectChangeHandler}
       />
     )
   }
@@ -33,10 +33,10 @@ class OperatorForm extends Component {
 
 const mapStateToProps = state => {
   return {
-    operatorsList: state.list,
-    isOperatorsListLoading: state.isListLoading,
-    isOperatorsListError: state.isListLoadError,
-    selectedOperator: state.selectedOperator
+    operatorsList: state.operator.list,
+    isOperatorsListLoading: state.operator.isListLoading,
+    isOperatorsListError: state.operator.isListLoadError,
+    selectedOperator: state.operator.selectedOperator
   }
 };
 

@@ -1,4 +1,4 @@
-import { operatorFormConstants } from "../constants";
+import {operatorFormConstants} from "../constants";
 
 export const operator = (state = {
   list: null,

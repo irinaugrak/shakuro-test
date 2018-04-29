@@ -1,0 +1,28 @@
+.form__field {
+  margin-top: 25px; }
+  .form__field-label {
+    font-weight: bold; }
+  .form__field-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color ease-out 0.3s; }
+    .form__field-input:focus {
+      border-color: #aaa;
+      transition: border-color ease-out 0.3s; }
+    .form__field-input--error {
+      border-color: #ff0000; }
+      .form__field-input--error:focus {
+        border-color: #ff0000;
+        transition: border-color ease-out 0.3s; }
+    .form__field-input-item {
+      position: relative; }
+    .form__field-input-error {
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      font-size: 12px;
+      color: #ff0000; }

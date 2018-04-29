@@ -1,9 +1,8 @@
 import {createStore, applyMiddleware} from 'redux';
-import {operator} from "../reducers/OperatorForm";
+import {rootReducer} from "../reducers";
 import thunk from 'redux-thunk';
 
-
 export const store = createStore(
-  operator,
+  rootReducer,
   applyMiddleware(thunk)
 );
