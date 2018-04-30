@@ -2,14 +2,17 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  width: 100%;
   min-height: calc(100% - 40px);
   margin: 20px 0;
 
   overflow-y: auto;
 
   &-wrapper {
+    position: relative;
     display: flex;
     width: 300px;
+    min-height: 322px;
     padding: 40px;
 
     border: 1px solid #aaa;
@@ -18,6 +21,10 @@
     @media (max-width: 768px) {
       width: 300px;
       padding: 20px;
+    }
+
+    &--loading {
+      align-items: center;
     }
   }
 }

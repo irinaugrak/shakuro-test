@@ -8,7 +8,8 @@ html {
 body {
   margin: 0;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  user-select: none; }
 
 #root {
   display: flex;
@@ -16,6 +17,9 @@ body {
 
 .mobile-payment {
   width: 100%; }
+  .mobile-payment__wrapper {
+    display: flex;
+    height: 100%; }
 
 .spinner {
   box-sizing: border-box;
@@ -54,3 +58,37 @@ body {
       background: #ffffff;
       color: #3ec036;
       transition: background ease-out 0.3s, color ease-out 0.3s; }
+  .form__back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    fill: #3ec036;
+    cursor: pointer;
+    transition: fill 0.3s ease-out; }
+    .form__back:hover {
+      fill: #2d8c26;
+      transition: fill 0.3s ease-out; }
+
+.fade-enter {
+  opacity: 0; }
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 400ms ease-in; }
+
+.fade-exit {
+  display: none; }
+
+.testy-enter {
+  opacity: 0; }
+
+.testy-enter.testy-enter-active {
+  opacity: 1;
+  transition: opacity 400ms ease-in; }
+
+.test-exit {
+  opacity: 1; }
+
+.testy-enter.testy-enter-active {
+  opacity: 0;
+  transition: opacity 400ms ease-in; }

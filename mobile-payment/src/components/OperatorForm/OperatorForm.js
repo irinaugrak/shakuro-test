@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import {withRouter} from 'react-router-dom';
 
 import * as operatorFormActions from '../../actions/OperatorForm';
 import OperatorFormLayout from './OperatorFormLayout';
@@ -11,11 +12,22 @@ import './OperatorForm.css';
 class OperatorForm extends Component {
 
   componentDidMount() {
-    !this.props.operatorsList ? this.props.operatorFormActions.getOperatorsList() : null;
+
+    if (!this.props.operatorsList) {
+      this.props.operatorFormActions.getOperatorsList();
+    }
   };
 
   _selectChangeHandler = data => {
     this.props.operatorFormActions.selectOperator(data);
+  };
+
+  _operatorFormSubmitHandler = () => {
+    this.props.history.push("/pay");
+  };
+
+  _submitOperatorFormRefreshClickHandler = () => {
+    this.props.history.push('/');
   };
 
   render() {
@@ -26,6 +38,8 @@ class OperatorForm extends Component {
         isOperatorsListError={this.props.isOperatorsListError}
         selectedOperator={this.props.selectedOperator}
         onSelectChange={this._selectChangeHandler}
+        onOperatorFormSubmit={this._operatorFormSubmitHandler}
+        onOperatorFormRefreshClick={this._submitOperatorFormRefreshClickHandler}
       />
     )
   }
@@ -46,4 +60,4 @@ const mapDispatchToProps = dispatch => {
   }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(OperatorForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(OperatorForm));

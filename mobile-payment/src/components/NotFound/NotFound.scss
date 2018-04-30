@@ -1,0 +1,31 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 100px;
+
+  &__title {
+    margin: 0;
+
+    font-size: 40px;
+  }
+
+  &__text {
+    margin: 50px 0 0 0;
+
+    font-size: 20px;
+  }
+
+  &__link {
+    font-size: 20px;
+    text-decoration: none;
+    color: #4871ff;
+
+    transition: color ease-out 0.3s;
+
+    &:hover {
+      color: #ff0000;
+      transition: color ease-out 0.3s;
+    }
+  }
+}

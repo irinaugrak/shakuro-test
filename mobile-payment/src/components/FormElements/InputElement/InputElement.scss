@@ -33,6 +33,16 @@
       }
     }
 
+    &--success {
+      border-color: #44d23a;
+
+      &:focus {
+        border-color: #44d23a;
+
+        transition: border-color ease-out 0.3s;
+      }
+    }
+
     &-item {
       position: relative;
     }

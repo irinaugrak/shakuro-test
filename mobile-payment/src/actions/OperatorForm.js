@@ -1,4 +1,5 @@
 import {operatorFormConstants} from "../constants";
+import {randomize} from "../utils/randomize";
 
 const operators = [
   {value: 1, label: 'МТС'},
@@ -22,7 +23,7 @@ const getOperatorListLoading = () => ({
 export const getOperatorsList = () => {
   return dispatch => {
     dispatch(getOperatorListLoading());
-    setTimeout(() => dispatch(getOperatorListSuccess(operators)), 2000);
+    randomize() ? setTimeout(() => dispatch(getOperatorListSuccess(operators)), 2000) : setTimeout(() => dispatch(getOperatorListFailure()), 2000);
   }
 };
 

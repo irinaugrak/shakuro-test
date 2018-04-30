@@ -1,0 +1,14 @@
+.form__error-message-text {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold; }
+
+.form__error-message-one-more {
+  margin: 30px 0 0 0;
+  font-size: 16px;
+  color: #4871ff;
+  transition: color ease-out 0.3s;
+  cursor: pointer; }
+  .form__error-message-one-more:hover {
+    color: #ff0000;
+    transition: color ease-out 0.3s; }

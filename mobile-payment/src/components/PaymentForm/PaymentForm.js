@@ -1,51 +1,69 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
-import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import {connect} from 'react-redux';
+import {withRouter} from 'react-router-dom';
 
-//import * as operatorFormActions from '../../actions/OperatorForm';
+import * as paymentFormActions from '../../actions/PaymentForm';
 import PaymentFormLayout from './PaymentFormLayout';
-import {inputNumbersOnly, phoneStrClear} from "../../utils/formFunctions";
 
 import './PaymentForm.css';
 
 class PaymentForm extends Component {
 
-  _amountKeyPressHandler = e => {
+  componentDidMount() {
 
-    if (!inputNumbersOnly(e)) {
-      e.preventDefault();
+    if (!this.props.selectedOperator) {
+      this.props.history.push('/');
     }
+  }
+
+  componentWillUnmount() {
+    this.props.paymentFormActions.paymentFormDataClear();
+  }
+
+  _paymentFormSubmitHandler = values => {
+    this.props.paymentFormActions.paymentFormSubmit(values);
   };
 
-  _submitForm = values => {
-    console.log(values);
+  _paymentFormBackClickHandler = () => {
+    this.props.history.push('/');
+  };
+
+  _paymentFormErrorMessageCloseClickHandler = () => {
+    this.props.paymentFormActions.paymentFormErrorMessageClose();
   };
 
   render() {
-    const {selectedOperator} = this.props;
+    const {selectedOperator, submittedData, isDataLoading, isDataSubmitError} = this.props;
 
     return (
-      selectedOperator ?
-        <PaymentFormLayout
-          selectedOperator={selectedOperator}
-          onAmountKeyPress={this._amountKeyPressHandler}
-          onSubmit={this._submitForm}
-        />
-        :
-        <Redirect to="/" />
+      <PaymentFormLayout
+        selectedOperator={selectedOperator}
+        submittedData={submittedData}
+        isDataLoading={isDataLoading}
+        isDataSubmitError={isDataSubmitError}
+        onSubmit={this._paymentFormSubmitHandler}
+        onPaymentFormBackClick={this._paymentFormBackClickHandler}
+        onPaymentFormErrorMessageCloseClick={this._paymentFormErrorMessageCloseClickHandler}
+      />
     )
   }
 }
 
 const mapStateToProps = state => {
   return {
-    selectedOperator: state.operator.selectedOperator
+    selectedOperator: state.operator.selectedOperator,
+    isPaymentFormOpen: state.payment.isPaymentFormOpen,
+    submittedData: state.payment.submittedData,
+    isDataLoading: state.payment.isDataLoading,
+    isDataSubmitError: state.payment.isDataSubmitError
   }
 };
 
 const mapDispatchToProps = dispatch => {
-  return {}
+  return {
+    paymentFormActions: bindActionCreators(paymentFormActions, dispatch)
+  }
 };
 
-export default connect(mapStateToProps)(PaymentForm)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(PaymentForm));

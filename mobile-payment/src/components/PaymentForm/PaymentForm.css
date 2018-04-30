@@ -2,12 +2,15 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  width: 100%;
   min-height: calc(100% - 40px);
   margin: 20px 0;
   overflow-y: auto; }
   .mobile-payment__pay-wrapper {
+    position: relative;
     display: flex;
     width: 300px;
+    min-height: 322px;
     padding: 40px;
     border: 1px solid #aaa;
     border-radius: 5px; }
@@ -15,3 +18,5 @@
       .mobile-payment__pay-wrapper {
         width: 300px;
         padding: 20px; } }
+    .mobile-payment__pay-wrapper--loading {
+      align-items: center; }
