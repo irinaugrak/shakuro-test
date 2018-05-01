@@ -1,4 +1,4 @@
-import {paymentFormConstants} from "../constants";
+import {paymentFormConstants} from '../constants';
 
 export const payment = (state = {
   submittedData: null,

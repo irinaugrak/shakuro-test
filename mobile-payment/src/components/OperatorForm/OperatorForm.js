@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
@@ -9,7 +9,7 @@ import OperatorFormLayout from './OperatorFormLayout';
 import 'react-select/dist/react-select.css';
 import './OperatorForm.css';
 
-class OperatorForm extends Component {
+class OperatorForm extends PureComponent {
 
   componentDidMount() {
 

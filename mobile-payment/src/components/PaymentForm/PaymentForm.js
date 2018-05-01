@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
@@ -8,7 +8,7 @@ import PaymentFormLayout from './PaymentFormLayout';
 
 import './PaymentForm.css';
 
-class PaymentForm extends Component {
+class PaymentForm extends PureComponent {
 
   componentDidMount() {
 
