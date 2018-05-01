@@ -1,5 +1,5 @@
-import {paymentFormConstants} from "../constants";
-import {randomize} from "../utils/randomize";
+import {paymentFormConstants} from '../constants';
+import {randomize} from '../utils/randomize';
 
 const paymentFormSubmitSuccess = data => ({
   type: paymentFormConstants.PAYMENT_FORM_SUBMITTED_SUCCESS,
@@ -17,7 +17,10 @@ const paymentFormSubmitLoading = () => ({
 export const paymentFormSubmit = data => {
   return dispatch => {
     dispatch(paymentFormSubmitLoading());
-    randomize() ? setTimeout(() => dispatch(paymentFormSubmitSuccess(data)), 2000) : setTimeout(() => dispatch(paymentFormSubmitFailure()), 2000)
+    randomize() ?
+      setTimeout(() => dispatch(paymentFormSubmitSuccess(data)), 2000)
+      :
+      setTimeout(() => dispatch(paymentFormSubmitFailure()), 2000);
   }
 };
 

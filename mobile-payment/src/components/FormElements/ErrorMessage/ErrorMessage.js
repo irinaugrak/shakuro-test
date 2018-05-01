@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import './ErrorMessage.css';
 
 const ErrorMessage = ({onFormErrorMessageCloseClick}) =>
-  <div className="form__error-message">
-    <p className="form__error-message-text">Ваш платеж не прошел</p>
+  <div className='form__error-message'>
+    <p className='form__error-message-text'>Ваш платеж не прошел</p>
     <p
-      className="form__error-message-one-more"
+      className='form__error-message-one-more'
       onClick={onFormErrorMessageCloseClick}
     >
       Попробовать снова

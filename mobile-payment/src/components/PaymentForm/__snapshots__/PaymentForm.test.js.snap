@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders PaymentFormLayout loading correctly 1`] = `
+<div
+  className="mobile-payment__pay"
+>
+  <div
+    className="mobile-payment__pay-wrapper mobile-payment__pay-wrapper--loading"
+  >
+    <div
+      className="spinner"
+    />
+  </div>
+</div>
+`;
+
+exports[`renders PaymentFormLayout loading correctly 2`] = `
+<div
+  className="mobile-payment__pay"
+>
+  <div
+    className="mobile-payment__pay-wrapper"
+  >
+    <div
+      className="form__error-message"
+    >
+      <p
+        className="form__error-message-text"
+      >
+        Ваш платеж не прошел
+      </p>
+      <p
+        className="form__error-message-one-more"
+        onClick={[Function]}
+      >
+        Попробовать снова
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders PaymentFormLayout loading correctly 3`] = `
+<div
+  className="mobile-payment__pay"
+>
+  <div
+    className="mobile-payment__pay-wrapper"
+  >
+    <div
+      className="form__success-message"
+    >
+      <p
+        className="form__success-message-text"
+      >
+        Успешно отправлены данные:
+      </p>
+      <p
+        className="form__success-message-data"
+      >
+        {"testData":"testData"}
+      </p>
+      <a
+        className="form__success-message-link"
+        href="/"
+        onClick={[Function]}
+      >
+        На главную страницу
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders PaymentFormLayout loading correctly 4`] = `
+<div
+  className="mobile-payment__pay"
+>
+  <div
+    className="mobile-payment__pay-wrapper"
+  >
+    <div
+      className="form__back"
+      onClick={[Function]}
+      style={
+        Object {
+          "height": 16,
+          "width": 24,
+        }
+      }
+    />
+    <form
+      className="form"
+      onSubmit={[Function]}
+    >
+      <div
+        className="form__field"
+      >
+        <label
+          className="form__field-label"
+        >
+          Оператор
+        </label>
+        <div
+          className="form__field-input-item"
+        >
+          <input
+            className="form__field-input"
+            disabled={true}
+            name="operator"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onDragStart={[Function]}
+            onDrop={[Function]}
+            onFocus={[Function]}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        className="form__field"
+      >
+        <label
+          className="form__field-label"
+        >
+          Номер телефона
+        </label>
+        <div
+          className="form__field-input-item"
+        >
+          <input
+            className="form__field-input"
+            mask="+1 (111) 111-11-11"
+            maxLength={18}
+            name="phone"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onDragStart={[Function]}
+            onDrop={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            onPaste={[Function]}
+            placeholder=""
+            size={18}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        className="form__field"
+      >
+        <label
+          className="form__field-label"
+        >
+          Сумма платежа (до 1000 рублей)
+        </label>
+        <div
+          className="form__field-input-item"
+        >
+          <input
+            className="form__field-input"
+            disabled={false}
+            name="amount"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onDragStart={[Function]}
+            onDrop={[Function]}
+            onFocus={[Function]}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <button
+        className="form__submit"
+        type="submit"
+      >
+        Оплатить
+      </button>
+    </form>
+  </div>
+</div>
+`;
