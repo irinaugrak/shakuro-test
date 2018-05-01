@@ -19,7 +19,6 @@ const setOperatorFormLayoutParams = params => {
 };
 
 const OperatorFormLayoutTestCaseCreate = testCase => {
-
   const params = setOperatorFormLayoutParams(testCase);
   const element = renderer
     .create(
@@ -34,7 +33,7 @@ const OperatorFormLayoutTestCaseCreate = testCase => {
   expect(element).toMatchSnapshot();
 };
 
-it('renders PaymentFormLayout loading correctly', () => {
+it('renders OperatorFormLayout loading correctly', () => {
   const testCases = [
     {
       operatorsList: null,

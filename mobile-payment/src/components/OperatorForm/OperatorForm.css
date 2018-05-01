@@ -16,7 +16,7 @@
     border-radius: 5px; }
     @media (max-width: 768px) {
       .mobile-payment__operator-wrapper {
-        width: 300px;
+        width: 280px;
         padding: 20px; } }
   .mobile-payment__operator-form {
     text-align: center; }
@@ -71,6 +71,9 @@
   .mobile-payment__operator .Select {
     width: 300px;
     margin: 30px auto 0 auto; }
+    @media (max-width: 768px) {
+      .mobile-payment__operator .Select {
+        width: 280px; } }
   .mobile-payment__operator .Select-control {
     height: 40px; }
   .mobile-payment__operator .Select-placeholder {
