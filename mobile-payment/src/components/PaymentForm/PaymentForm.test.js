@@ -8,8 +8,9 @@ import { MemoryRouter } from 'react-router-dom';
 import PaymentFormLayout from './PaymentFormLayout';
 import {amountNormalize} from "./PaymentFormLayout";
 
+const func = jest.fn();
+
 const setPaymentFormLayoutParams = params => {
-  const func = jest.fn();
 
   return {
     isDataLoading: params.isDataLoading,
@@ -39,7 +40,7 @@ const PaymentFormLayoutTestCaseCreate = testCase => {
   expect(element).toMatchSnapshot();
 };
 
-it('renders PaymentFormLayout loading correctly', () => {
+it('renders PaymentFormLayout correctly', () => {
   const testCases = [
     {
       isDataLoading: true,

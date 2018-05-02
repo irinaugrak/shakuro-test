@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders OperatorFormLayout loading correctly 1`] = `
+exports[`renders OperatorFormLayout correctly 1`] = `
 <div
   className="mobile-payment__operator"
 >
@@ -14,7 +14,7 @@ exports[`renders OperatorFormLayout loading correctly 1`] = `
 </div>
 `;
 
-exports[`renders OperatorFormLayout loading correctly 2`] = `
+exports[`renders OperatorFormLayout correctly 2`] = `
 <div
   className="mobile-payment__operator"
 >
@@ -149,7 +149,7 @@ exports[`renders OperatorFormLayout loading correctly 2`] = `
 </div>
 `;
 
-exports[`renders OperatorFormLayout loading correctly 3`] = `
+exports[`renders OperatorFormLayout correctly 3`] = `
 <div
   className="mobile-payment__operator"
 >
@@ -257,7 +257,7 @@ exports[`renders OperatorFormLayout loading correctly 3`] = `
 </div>
 `;
 
-exports[`renders OperatorFormLayout loading correctly 4`] = `
+exports[`renders OperatorFormLayout correctly 4`] = `
 <div
   className="mobile-payment__operator"
 >

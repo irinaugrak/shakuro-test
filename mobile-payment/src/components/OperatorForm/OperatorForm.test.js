@@ -4,8 +4,9 @@ import {MemoryRouter} from 'react-router-dom';
 
 import OperatorFormLayout from './OperatorFormLayout';
 
+const func = jest.fn();
+
 const setOperatorFormLayoutParams = params => {
-  const func = jest.fn();
 
   return {
     operatorsList: params.operatorsList,
@@ -33,7 +34,7 @@ const OperatorFormLayoutTestCaseCreate = testCase => {
   expect(element).toMatchSnapshot();
 };
 
-it('renders OperatorFormLayout loading correctly', () => {
+it('renders OperatorFormLayout correctly', () => {
   const testCases = [
     {
       operatorsList: null,
