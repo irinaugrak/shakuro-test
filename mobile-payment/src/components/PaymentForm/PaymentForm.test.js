@@ -3,23 +3,22 @@ import {reduxForm} from 'redux-form';
 import renderer from 'react-test-renderer';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
-import { MemoryRouter } from 'react-router-dom';
+import {MemoryRouter} from 'react-router-dom';
 
 import PaymentFormLayout from './PaymentFormLayout';
 import {amountNormalize} from "./PaymentFormLayout";
 
 const func = jest.fn();
 
-const setPaymentFormLayoutParams = params => {
-
-  return {
+const setPaymentFormLayoutParams = params => (
+  {
     isDataLoading: params.isDataLoading,
     isDataSubmitError: params.isDataSubmitError,
     submittedData: params.submittedData,
     onPaymentFormErrorMessageCloseClick: func,
     onPaymentFormBackClick: func
   }
-};
+);
 
 const PaymentFormLayoutTestCaseCreate = testCase => {
   const store = createStore(() => ({}));

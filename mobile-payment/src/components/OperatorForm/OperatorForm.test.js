@@ -6,9 +6,8 @@ import OperatorFormLayout from './OperatorFormLayout';
 
 const func = jest.fn();
 
-const setOperatorFormLayoutParams = params => {
-
-  return {
+const setOperatorFormLayoutParams = params => (
+  {
     operatorsList: params.operatorsList,
     selectedOperator: params.selectedOperator,
     isOperatorsListLoading: params.isOperatorsListLoading,
@@ -17,7 +16,7 @@ const setOperatorFormLayoutParams = params => {
     onOperatorFormRefreshClick: func,
     onSelectChange: func
   }
-};
+);
 
 const OperatorFormLayoutTestCaseCreate = testCase => {
   const params = setOperatorFormLayoutParams(testCase);
